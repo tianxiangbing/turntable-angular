@@ -1,0 +1,19 @@
+<div>
+    <div class="my-count">
+        <i><em>{{count}}</em></i><a></a>
+    </div>
+    <div class="my-list hide">
+        <a class="js-dialog-close icon-close"></a>
+        <h1><em>{{count}}</em></h1>
+        <h2>我的中奖记录</h2>
+        <div class="mycount myrecord">
+            <table>
+                <tbody>
+                <tr ng-repeat="record in myRecordList">
+                    <td>{{$index+1}}. {{record.goods}}</td>
+                    <td width="130">{{record.time}}</td>
+                </tr>
+                </tbody></table>
+        </div>
+    </div>
+</div>
