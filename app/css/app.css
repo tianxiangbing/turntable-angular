@@ -4,14 +4,14 @@ footer{background: url("images/ralate_10.jpg") no-repeat center center;height: 6
 .config{background: url("images/ralate_06.jpg") no-repeat center center;height: 567px;}
 .rule{background: url("images/ralate_08.jpg") no-repeat center center;height: 467px;}
 .turntable{background: url("images/ralate_03.jpg") no-repeat center center;height: 904px;width:1000px;margin:0 auto;}
-.my-count{width:520px;margin:0 auto;}
-.my-count i{position:relative; display:inline-block;height:60px;width:284px;background: url("images/ralate_04.jpg") no-repeat center center;}
-.my-count i em,.my-list em{text-align: center;display:block;width:52px; float:right;position:absolute;right:40px;font-size: 48px;color:#f33529;font-weight: bold;vertical-align: -3px;}
+.my-count{width:550px;margin:0 auto;}
+.my-count i{position:relative; display:inline-block;height:60px;width: 328px;background: url("images/ralate_04.jpg") no-repeat center center;}
+.my-count i em,.my-list em{text-align: center;display:block;width: 82px; float:right;position:absolute;right:40px;font-size: 48px;color:#f33529;font-weight: bold;vertical-align: -3px;}
 .my-list em{right: 140px;top:45px;}
-.my-count a{cursor: pointer; display:inline-block;width:183px;height: 60px;background: url("images/ralate_05.jpg") no-repeat center center;}
+.my-count a{margin-left:15px; cursor: pointer; display:inline-block;width:183px;height: 60px;background: url("images/ralate_05.jpg") no-repeat center center;}
 .record{margin-bottom: 20px;  height: 128px;background: url("images/ralate_07.jpg") no-repeat center center;}
 .my-list{background:url("images/box-record.png") no-repeat;height: 100%;position:relative;padding-top:50px;}
-.my-list h1{width:255px;margin:0px auto 30px;  height: 40px;background: url("images/box-record-title.png") no-repeat;}
+.my-list h1{width: 320px;margin:0px auto 30px;  height: 40px;background: url("images/box-record-title.png") no-repeat;}
 .my-list h2{font-size: 25px;color:#3b3b3b;border-bottom:1px solid #3b3b3b;width:310px;margin:0 auto;text-align:center;}
 .myrecord{height: 130px;overflow: auto;}
 .myrecord table{line-height:38px;width:285px;margin-left: 10px;font-size: 13px;}
@@ -27,8 +27,9 @@ ul,li{list-style: none;}
 .record li{float:left;}
 .record span{padding:0 20px;}
 #container{width:1000px;margin:0 auto;}
-.record-content {position:relative;top:20px; height:30px;overflow: hidden;}
+.record-content {position:relative;top:20px; height:30px;overflow: hidden;width: 920px;}
 .record-content ul{position:absolute;top:0;}
+.record-content li{width: 440px;float:left;}
 .pointer{background: url("images/pointer.png") no-repeat; position:absolute; width: 164px;height:226px;left:264px;top: 221px;cursor: pointer;}
 .pointer.disabled{background: url("images/pointer-disabled.png") no-repeat;}
 .message-box{width:811px;height: 592px;position:relative;}
