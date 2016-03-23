@@ -3,7 +3,7 @@ var directives = angular.module("myApp.directives",[
     "myApp.services"
 ]);
 
-directives.directive("myRecord",function(){
+directives.directive("myRecord",['getList',function(getList){
     return{
         restrict:'EA',
         replace:true,
@@ -17,12 +17,15 @@ directives.directive("myRecord",function(){
             var dialog = new Dialog();
             dialog.init({target:$(dialog_content),show:scope.showList,fixed:true,mask:true});
             btn.bind('click',function(){
+                getList.getRecordList(scope.uid).then(function(res){
+                    scope.myRecordList = res.data;
+                });
                 dialog.show();
                 return false;
             });
         }
     }
-});
+}]);
 directives.directive('lotteryRecord',function(){
    return {
        restrict:"EA",

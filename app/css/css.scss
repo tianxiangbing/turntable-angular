@@ -13,6 +13,13 @@ body{
     width:pxToRem($screenWidth);
     margin:0 auto;
     height:pxToRem(2166);
+    background-size: contain;
+  }
+  .bottom{
+    width:100%;
+    position:absolute;
+    height: pxToRem(254);
+    bottom:pxToRem(22);
     background:url('images/bottom.jpg') no-repeat bottom center;
     background-size: contain;
   }
@@ -103,6 +110,11 @@ $arr :index-1 index-2 index-2-1 index-2-2 index-2-3 index-2-4 index-2-5 index-3 
     background:url("images/#{$item}.png") no-repeat;
   }
 }
+.index-2-1,.index-2-2,.index-2-3,.index-2-4,.index-2-5{
+  .action{
+    bottom:pxToRem(25);
+  }
+}
 
 .ui-dialog-mask{}
 .dialog-con{position: absolute;top:205px;left: 100px;width: 504px;margin:0 auto;text-align: center;}
@@ -137,7 +149,10 @@ $arr :index-1 index-2 index-2-1 index-2-2 index-2-3 index-2-4 index-2-5 index-3 
   width:pxToRem(423);
   position:relative;
   background-size: contain;
-  .icon-close{cursor:pointer;width:58px;height:58px;position:absolute;right:-30px;top:-30px;}
+  .icon-close{
+    cursor:pointer;width:58px;height:58px;position:absolute;
+    right:pxToRem(0);top:pxToRem(0);
+  }
   h1{
     width:pxToRem(380);
     margin: 0 auto pxToRem(30);
@@ -160,6 +175,16 @@ $arr :index-1 index-2 index-2-1 index-2-2 index-2-3 index-2-4 index-2-5 index-3 
     &.c{
       width:pxToRem(90);
     }
+
+    &.use{
+      float:right;
+      color:#fa0309;
+    }
+    &.used{
+      float:right;
+      color:#2bb201;
+    }
+
   }
 }
 .my-list h2{font-size: 25px;color:#000000;margin:0 auto;text-align:center;}
@@ -168,7 +193,6 @@ $arr :index-1 index-2 index-2-1 index-2-2 index-2-3 index-2-4 index-2-5 index-3 
 .myrecord table td{border-bottom: 1px dashed #bdbcbc;}
 .myrecord table td span{color:#ff0000;}
 .mycount{width:100%;margin: 10px auto 0 auto;overflow-x:hidden;overflow-y:auto; }
-
 
 @media screen  and (min-width:750px){
   body{

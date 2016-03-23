@@ -17,9 +17,7 @@ angular.module('myApp', [
     //    });
     //},1000)
     $scope.lotteryNumber = $('#lotteryNumber').val();
-    getList.getRecordList($scope.uid).then(function(res){
-        $scope.myRecordList = res.data;
-    });
+
     function initFontSize() {
         document.documentElement.style.fontSize = Math.min( document.documentElement.clientWidth,750) / 7.5 + 'px';
     }

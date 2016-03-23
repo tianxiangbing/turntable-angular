@@ -10,10 +10,16 @@
             <table>
                 <tbody>
                 <tr ng-repeat="record in myRecordList">
-                    <td><div class="c">第{{$index+1}}次. </div><div class="d">{{record.goods}}</div></td>
+                    <td>
+                        <div class="c">第{{$index+1}}次. </div>
+                        <div class="d">{{record.goods}}</div>
+                        <div ng-if="record.used===false" class="use">未使用</div>
+                        <div ng-if="record.used===true" class="used">已使用</div>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
+    <div class="bottom"></div>
 </div>
