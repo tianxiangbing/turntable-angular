@@ -1,0 +1,174 @@
+@import "base";
+html,body{
+  padding:0;margin:0;font-family: "Microsoft YaHei";
+}
+
+body{
+  background:url('images/bg.jpg') no-repeat top center;
+  background-size:cover;
+  height:pxToRem(2166);
+  overflow-x:hidden;
+  #container{
+    position:relative;
+    width:pxToRem($screenWidth);
+    margin:0 auto;
+  }
+}
+@media screen  and (min-width:750px){
+  body{
+    background:url('images/bg-pc.jpg') no-repeat top center;
+    background-size:cover;
+    height:pxToRem(2166);
+  }
+}
+.turntable{
+  background: url("images/ralate.png") no-repeat center center;
+  height: pxToRem(750);
+  width:pxToRem(750);
+  margin:0 auto 0 auto;
+  background-size:contain;
+  position:relative;
+  top:pxToRem(350);
+}
+.pointer{
+  background: url("images/pointer.png") no-repeat;
+  position:absolute;
+  width: pxToRem(150);
+  height:pxToRem(210);
+  left:pxToRem((750-150)/2);
+  top: pxToRem((750-270)/2);
+  cursor: pointer;
+  background-size:contain;
+}
+.pointer.disabled{
+  background: url("images/pointer-disabled.png") no-repeat;
+}
+.hide{
+  display:none;
+}
+.my-count{
+  font-size: $fontSize;
+  position:absolute;
+  left:pxToRem(115);
+  top:pxToRem(1085);
+  i{
+    font-style: normal;
+    color:#fff;
+    display:block;
+    width:pxToRem(200);
+    text-align: center;
+    height: pxToRem(50);
+    vertical-align: middle;
+    line-height: pxToRem(50);
+  }
+  em{
+    font-style: normal;
+    width:pxToRem(45);
+    text-align: center;
+    @extend %inlineBlock;
+    color:#fafd20;
+    font-size: $fontSize4 !important;
+    vertical-align:baseline;
+    line-height: $fontSize4;
+  }
+  a{
+    color:#fff;
+    position:absolute;
+    left:pxToRem(290);
+    top:0;
+    display: block;
+    width:pxToRem(207);
+    text-align: center;;
+    height: pxToRem(50);
+    line-height: pxToRem(50);
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+
+.message-box{
+  width:pxToRem(676);height:pxToRem(568);position:relative;
+  background-size: contain !important;
+}
+.message-box .close{
+  display:block;
+  position:absolute;
+  width:58px;
+  height:58px;
+  right:0px;
+  top:0px;
+  cursor: pointer;
+}
+
+$arr :index-1 index-2 index-2-1 index-2-2 index-2-3 index-2-4 index-2-5 index-3 index-4 index-5 index-6 index-7 index-8 index-9 index-10 index-11 index-12;
+
+@each $item in $arr{
+  .#{$item}{
+    background:url("images/#{$item}.png") no-repeat;
+  }
+}
+
+.ui-dialog-mask{}
+.dialog-con{position: absolute;top:205px;left: 100px;width: 504px;margin:0 auto;text-align: center;}
+.dialog-title{font-size: 33px;font-weight: bolder;font-family: Microsoft YaHei,Arial;color:#555555;line-height: 50px;}
+.dialog-title span{font-size: 23px;font-weight: normal;}
+.ui-dialog-close{right:8px;top:58px;width:40px;height: 40px;font-size: 0px;opacity: 0;}
+.action{
+  position: absolute;
+  text-align: center;
+  height:pxToRem(45);
+  width:100%;
+  bottom:pxToRem(80);
+}
+.action a{cursor:pointer;}
+.action .virtual{display:block;width:240px;height:60px;position:absolute;left:100px;}
+.action .agin{
+  width:pxToRem(244);
+  height:pxToRem(45);
+  position:absolute;
+}
+.action-single .virtual{display:none;}
+.action-single .agin{
+  position:absolute;
+  bottom:0;
+  left:pxToRem(244);
+}
+.my-list em{right: 140px;top:45px;}
+.record{margin-bottom: 20px;  height: 128px;background: url("images/ralate_07.jpg") no-repeat center center;}
+.my-list{
+  background:url("images/records.jpg") no-repeat;
+  height:pxToRem(597);
+  width:pxToRem(423);
+  position:relative;
+  background-size: contain;
+  .icon-close{cursor:pointer;width:58px;height:58px;position:absolute;right:-30px;top:-30px;}
+  h1{
+    width:pxToRem(380);
+    margin: 0 auto pxToRem(30);
+    height: pxToRem(90);
+    padding-top:pxToRem(10);
+    line-height: pxToRem(90);
+    font-size: $fontSize3;
+    border-bottom:1px solid #000000;
+    text-align: center;
+  }
+  em{
+    color:#d20101;
+    font-size: $fontSize4;
+    font-style: normal;
+  }
+}
+.myrecord{
+  div{
+    float:left;
+    &.c{
+      width:pxToRem(90);
+    }
+  }
+}
+.my-list h2{font-size: 25px;color:#000000;margin:0 auto;text-align:center;}
+.myrecord{height: 130px;overflow: auto;}
+.myrecord table{line-height:pxToRem(40);width:90%;margin-left: 10px;font-size: 13px;}
+.myrecord table td{border-bottom: 1px dashed #bdbcbc;}
+.myrecord table td span{color:#ff0000;}
+.mycount{max-height: 205px;width:100%;margin: 10px auto 0 auto;overflow-x:hidden;overflow-y:auto; }

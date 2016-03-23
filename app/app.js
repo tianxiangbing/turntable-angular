@@ -4,7 +4,7 @@
 angular.module('myApp', [
     "myApp.directives",
     "myApp.services"
-]).controller('myController',function($scope,getList,$http){
+]).controller('myController',['$scope','getList','$http',function($scope,getList,$http){
     //$scope.recordList = [{"phone":"130****12345","goods":"[寿全斋]姜心之作礼盒"},{"phone":"130****12345","goods":"[寿全斋]姜心之作礼盒"},{"phone":"130****12345","goods":"[寿全斋]姜心之作礼盒"}];
     $scope.uid = $('#hd_uid').val();
     getList.getNameList($scope.uid).then(function(res){
@@ -20,4 +20,8 @@ angular.module('myApp', [
     getList.getRecordList($scope.uid).then(function(res){
         $scope.myRecordList = res.data;
     });
-});
+    function initFontSize() {
+        document.documentElement.style.fontSize = Math.min( document.documentElement.clientWidth,750) / 7.5 + 'px';
+    }
+    initFontSize();
+}]);

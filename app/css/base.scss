@@ -1,0 +1,45 @@
+$baseFontSize :100;
+$screenWidth:750;
+$fontColor:#333;
+$fontColor0:#000;
+$fontColor2:#666;
+$fontColor3:#999;
+$moneyColor:#d20068;
+%bgWhite{
+  background-color:#fff;
+}
+%inlineBlock{
+  display:inline-block;
+}
+%overText{
+  white-space: nowrap;
+  text-overflow:ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  width:100%;
+}
+%nowrap{
+  white-space: nowrap;
+  word-break: keep-all;
+}
+@function pxToRem($px){
+  @return $px/$baseFontSize * 1rem;
+}
+$fontSize:14px;
+$fontSize2:15px;
+$fontSize3:16px;
+$fontSize4:17px;
+$lineHeightList : (H1:1.6,H2:1.8,H3:2,H4:2.2,H5:3,H6:3.6);
+@each $index,$value in $lineHeightList {
+  %line#{$index} {
+    line-height:$value;
+  }
+}
+$bordere5:1px solid #e5e5e5;
+$borderCCC:1px solid #cccccc;
+
+img{
+  vertical-align: middle;
+}
+*{box-sizing: border-box;}
+
