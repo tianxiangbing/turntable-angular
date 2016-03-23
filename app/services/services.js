@@ -25,6 +25,8 @@ services.service("getList",function($q,$http){
                 alert(response.msg);
                 deferred.reject(response);
             }
+        }).catch(function(r){
+            console.log(r)
         });
         return deferred.promise;
     }

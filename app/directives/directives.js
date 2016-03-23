@@ -110,6 +110,7 @@ directives.directive("turntable",function(getList){
                 if (counter>0 &&!isdoning) {
                     isdoning= true;
                     timer = getList.lottery(scope.uid).then(function(result) {
+                        console.log(result)
                             if (result.status) {
                                 //scope.$apply(function(){
                                     scope.lotteryNumber--;
