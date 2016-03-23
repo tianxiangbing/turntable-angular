@@ -7,9 +7,9 @@ angular.module('myApp', [
 ]).controller('myController',['$scope','getList','$http',function($scope,getList,$http){
     //$scope.recordList = [{"phone":"130****12345","goods":"[寿全斋]姜心之作礼盒"},{"phone":"130****12345","goods":"[寿全斋]姜心之作礼盒"},{"phone":"130****12345","goods":"[寿全斋]姜心之作礼盒"}];
     $scope.uid = $('#hd_uid').val();
-    getList.getNameList($scope.uid).then(function(res){
-         $scope.recordList = res.data;
-    });
+    //getList.getNameList($scope.uid).then(function(res){
+    //     $scope.recordList = res.data;
+    //});
     //alert($scope.lotteryNumber)
     //setTimeout(function(){
     //    $scope.$apply(function () {

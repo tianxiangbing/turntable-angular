@@ -12,13 +12,9 @@ body{
     position:relative;
     width:pxToRem($screenWidth);
     margin:0 auto;
-  }
-}
-@media screen  and (min-width:750px){
-  body{
-    background:url('images/bg-pc.jpg') no-repeat top center;
-    background-size:cover;
     height:pxToRem(2166);
+    background:url('images/bottom.jpg') no-repeat bottom center;
+    background-size: contain;
   }
 }
 .turntable{
@@ -38,7 +34,7 @@ body{
   left:pxToRem((750-150)/2);
   top: pxToRem((750-270)/2);
   cursor: pointer;
-  background-size:contain;
+  background-size:contain !important;
 }
 .pointer.disabled{
   background: url("images/pointer-disabled.png") no-repeat;
@@ -95,8 +91,8 @@ body{
   position:absolute;
   width:58px;
   height:58px;
-  right:0px;
-  top:0px;
+  right:pxToRem(44);
+  top:pxToRem(10);
   cursor: pointer;
 }
 
@@ -167,8 +163,19 @@ $arr :index-1 index-2 index-2-1 index-2-2 index-2-3 index-2-4 index-2-5 index-3 
   }
 }
 .my-list h2{font-size: 25px;color:#000000;margin:0 auto;text-align:center;}
-.myrecord{height: 130px;overflow: auto;}
+.myrecord{height: pxToRem(300);overflow: auto; }
 .myrecord table{line-height:pxToRem(40);width:90%;margin-left: 10px;font-size: 13px;}
 .myrecord table td{border-bottom: 1px dashed #bdbcbc;}
 .myrecord table td span{color:#ff0000;}
-.mycount{max-height: 205px;width:100%;margin: 10px auto 0 auto;overflow-x:hidden;overflow-y:auto; }
+.mycount{width:100%;margin: 10px auto 0 auto;overflow-x:hidden;overflow-y:auto; }
+
+
+@media screen  and (min-width:750px){
+  body{
+    background:url('images/bg-pc.jpg') no-repeat top center;
+    background-size:cover;
+    height:pxToRem(2166);
+  }
+  .myrecord{height:337px;}
+  .myrecord .c{padding-left:10px;}
+}

@@ -167,7 +167,7 @@ directives.directive("turntable",['getList',function(getList){
                                 },{
                                     level: [10,20],
                                     background: 'index-5',
-                                    angel:60
+                                    angel:100
                                 },{
                                     level: [11,21],
                                     background: 'index-4',
