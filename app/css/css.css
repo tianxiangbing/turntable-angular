@@ -160,6 +160,10 @@ body {
 .index-2-1 .action, .index-2-2 .action, .index-2-3 .action, .index-2-4 .action, .index-2-5 .action {
   bottom: 0.25rem; }
 
+.index-8 .action {
+  bottom: 0.45rem;
+  left: -0.4rem; }
+
 .dialog-con {
   position: absolute;
   top: 205px;

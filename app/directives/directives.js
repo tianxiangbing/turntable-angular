@@ -101,7 +101,7 @@ directives.directive("turntable",['getList',function(getList){
                 }
             }
             var dialog = new Dialog();
-            dialog.init({target:$(".message-box"),show:false,width:811,height:592,fixed:true,mask:true});
+            dialog.init({target:$(".message-box"),show:false,width:'6.76rem',height:'5.68rem',fixed:true,mask:true});
             function messageBox(item){
                 dialog.show();
                 $(".message-box").prop('class','message-box '+item.background);

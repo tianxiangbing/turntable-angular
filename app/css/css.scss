@@ -115,6 +115,12 @@ $arr :index-1 index-2 index-2-1 index-2-2 index-2-3 index-2-4 index-2-5 index-3 
     bottom:pxToRem(25);
   }
 }
+.index-8{
+  .action{
+    bottom:pxToRem(45);
+    left:- pxToRem(40);
+  }
+}
 
 .ui-dialog-mask{}
 .dialog-con{position: absolute;top:205px;left: 100px;width: 504px;margin:0 auto;text-align: center;}
